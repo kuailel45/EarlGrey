@@ -459,7 +459,6 @@ static id WaitAndFindKeyForCharacter(NSString *character, CFTimeInterval timeout
   }
 
   __block id result = nil;
-  GREYFatalAssertNonMainThread();
   grey_dispatch_sync_on_main_thread(^{
     grey_check_condition_until_timeout(
         ^BOOL(void) {
